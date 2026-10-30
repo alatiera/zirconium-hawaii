@@ -76,6 +76,9 @@ environment:
 environment-nocache:
 - MAXJOBS
 
+variables:
+  prefix: "/app"
+
 config:
   install-commands:
     (>):

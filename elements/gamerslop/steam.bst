@@ -18,10 +18,14 @@ sources:
 variables:
   strip-binaries: ""
 
+  prefix: "/app"
+
 config:
   install-commands:
   - |
     make DESTDIR="%{install-root}" install
+    # Whatever
+    mv "%{install-root}/usr" "%{install-root}/app"
 
     # we don't have apt-get so the provided steamdeps script will always fail.
     ln -sf true "%{install-root}%{bindir}/steamdeps"

@@ -10,3 +10,6 @@ config:
   install-commands:
   - |
     install -Dm0755 target/release/libextest.so -t %{install-root}%{prefix}/%{lib32}
+
+variables:
+  prefix: "/app"

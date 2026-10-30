@@ -18,17 +18,19 @@ variables:
 
 config:
   install-commands:
-  - |
-    install -Dm0755 -t "%{install-root}%{bindir}" "usr/bin/steam-http-loader"
-    install -Dm0755 -t "%{install-root}%{bindir}" "usr/bin/steamos-select-branch"
-    install -Dm0755 -t "%{install-root}%{bindir}" "usr/bin/steamos-session-select"
+  - mkdir -p app/bin
+  - mkdir -p app/share
 
-    install -Dm0644 -t "%{install-root}%{datadir}/applications" "usr/share/applications/steam_http_loader.desktop"
-    install -Dm0644 -t "%{install-root}%{datadir}/applications" "usr/share/applications/gamescope-mimeapps.list"
+  - install -Dm0755 -t "%{install-root}%{bindir}" "app/bin/steam-http-loader"
+  - install -Dm0755 -t "%{install-root}%{bindir}" "app/bin/steamos-select-branch"
+  - install -Dm0755 -t "%{install-root}%{bindir}" "app/bin/steamos-session-select"
 
-    install -Dm0755 -t "%{install-root}%{datadir}/gamescope-session-plus/sessions.d" "usr/share/gamescope-session-plus/sessions.d/steam"
-    install -Dm0644 -t "%{install-root}%{datadir}/polkit-1/actions" "usr/share/polkit-1/actions/org.chimeraos.update.policy"
+  - install -Dm0644 -t "%{install-root}%{datadir}/applications" "app/share/applications/steam_http_loader.desktop"
+  - install -Dm0644 -t "%{install-root}%{datadir}/applications" "app/share/applications/gamescope-mimeapps.list"
 
-    install -Dm0644 -t "%{install-root}%{datadir}/wayland-sessions" "usr/share/wayland-sessions/gamescope-session-steam.desktop"
+  - install -Dm0755 -t "%{install-root}%{datadir}/gamescope-session-plus/sessions.d" "app/share/gamescope-session-plus/sessions.d/steam"
+  - install -Dm0644 -t "%{install-root}%{datadir}/polkit-1/actions" "app/share/polkit-1/actions/org.chimeraos.update.policy"
+
+  - install -Dm0644 -t "%{install-root}%{datadir}/wayland-sessions" "app/share/wayland-sessions/gamescope-session-steam.desktop"
   - |
     %{install-extra}

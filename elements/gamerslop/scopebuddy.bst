@@ -19,6 +19,8 @@ runtime-depends:
 variables:
   strip-binaries: ""
 
+  prefix: "/app"
+
 config:
   install-commands:
   - |

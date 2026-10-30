@@ -4,9 +4,12 @@ kind: stack
 public:
   bst:
     (?):
-    - arch == "x86_64":
-        integration-commands:
-        - sed -i '12a export LD_PRELOAD="%{prefix}/%{lib32}/libextest.so:/%{indep-libdir}/libextest.so"' %{bindir}/steam
+    # - arch == "x86_64":
+    #     integration-commands:
+        # FIXME
+        # <gamerslop/filesystem.bst:/]$ ls /app/bin/steam -al                                 
+        # lrwxrwxrwx 1 0 0 27 Nov 11  2011 /app/bin/steam -> /usr/lib/steam/bin_steam.sh
+        # - sed -i '12a export LD_PRELOAD="%{prefix}/%{lib32}/libextest.so:/%{indep-libdir}/libextest.so"' %{bindir}/steam
     - arch == "aarch64":
         integration-commands:
         - sed -i '12a export LD_PRELOAD="%{indep-libdir}/libextest.so"' %{bindir}/steam
@@ -14,6 +17,9 @@ public:
 depends:
 - gamerslop/_private/extest.bst
 - gamerslop/steam.bst
+
+variables:
+  prefix: "/app"
 
 (?):
 - arch == "x86_64":

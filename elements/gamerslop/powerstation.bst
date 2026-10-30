@@ -818,3 +818,5 @@ variables:
 
   make-install-args: >-
     PREFIX="%{install-root}%{prefix}" NO_RELOAD=true install
+  
+  prefix: "/app"

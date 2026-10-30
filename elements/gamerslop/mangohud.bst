@@ -39,6 +39,8 @@ variables:
     -Dmangoplot=disabled
     -Dwith_xnvctrl=disabled
 
+  prefix: "/app"
+
 config:
   # override install-commands to add missing executable bit to %{bindir}/mangohud
   install-commands:

@@ -31,6 +31,8 @@ variables:
   license-files-extra: ms-terms-of-use
   strip-binaries: ''
 
+  prefix: "/app"
+
 config:
   build-commands:
   - |
@@ -48,3 +50,4 @@ config:
     done
   - |
     %{install-extra}
+

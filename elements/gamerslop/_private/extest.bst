@@ -12,3 +12,6 @@ config:
     install -Dm0755 target/release/libextest.so -t %{install-root}%{prefix}/%{lib}
   - |
     %{install-extra}
+
+variables:
+  prefix: "/app"

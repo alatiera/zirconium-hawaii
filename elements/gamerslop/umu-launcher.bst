@@ -234,3 +234,6 @@ config:
   configure-commands:
   - |
     ./configure.sh --prefix=%{prefix} --use-system-pyzstd --use-system-urllib
+
+variables:
+  prefix: "/app"

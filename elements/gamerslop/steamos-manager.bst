@@ -881,9 +881,13 @@ environment:
 environment-nocache:
 - MAXJOBS
 
+variables:
+  prefix: "/app"
+
 config:
   build-commands:
   - cargo build --release --frozen --offline --jobs "${MAXJOBS}"
+  - cargo install --root '%{install-root}%{prefix}' --release --frozen --offline --jobs "${MAXJOBS}"
 
   install-commands:
   - |

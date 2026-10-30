@@ -24,7 +24,9 @@ variables:
 config:
   install-commands:
   - |
-    tar xvf *.pkg.tar.zst usr/share/alsa/ucm2/conf.d/sof-nau8821-max usr/lib/firmware/amd
+    mkdir -p app/lib/firmware/amd
+
+    tar xvf *.pkg.tar.zst app/share/alsa/ucm2/conf.d/sof-nau8821-max app/lib/firmware/amd
     rm -f *.pkg.tar.zst
   - |
     %{install-extra}

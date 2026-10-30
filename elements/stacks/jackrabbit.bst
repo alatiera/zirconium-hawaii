@@ -4,16 +4,17 @@ depends:
   - config/gamerslop.bst
   - gamerslop/dmemcg-booster.bst
   - gamerslop/extest.bst
-  - gamerslop/gamescope.bst
-  - gamerslop/gamescope-session.bst
-  - gamerslop/gamescope-session-steam.bst
+  # - gamerslop/gamescope.bst
+  # - gamerslop/gamescope-session.bst
+  # - gamerslop/gamescope-session-steam.bst
   - gamerslop/inputplumber.bst
   - gamerslop/mangohud.bst
   - gamerslop/powerbuttond.bst
   - gamerslop/powerstation.bst
   - gamerslop/scopebuddy.bst
   - gamerslop/steam.bst
-  - gamerslop/steamos-manager.bst
+  # Fuck this
+  # - gamerslop/steamos-manager.bst
   - gamerslop/umu-launcher.bst
 
   - gamerslop/scx-scheds.bst

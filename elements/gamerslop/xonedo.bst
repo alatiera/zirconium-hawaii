@@ -36,3 +36,6 @@ config:
     install -Dm0644 install/modprobe.conf "%{install-root}%{indep-libdir}/modprobe.d/xonedo.conf"
   - |
     %{install-extra}
+
+variables:
+  prefix: "/app"

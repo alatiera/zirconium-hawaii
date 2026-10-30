@@ -1164,6 +1164,10 @@ environment:
 environment-nocache:
 - MAXJOBS
 
+
+variables:
+  prefix: "/app"
+
 config:
   build-commands:
   - cargo build --release --all-features --frozen --offline --workspace --jobs "${MAXJOBS}"

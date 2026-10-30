@@ -36,3 +36,6 @@ config:
     dkms ${dkms_arguments} add
     dkms ${dkms_arguments} build
     dkms ${dkms_arguments} install
+
+variables:
+  prefix: "/app"
