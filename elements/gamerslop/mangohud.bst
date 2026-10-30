@@ -40,7 +40,7 @@ variables:
     -Dwith_xnvctrl=disabled
 
 config:
-  # override install-commands to add missing executable bit to /usr/bin/mangohud
+  # override install-commands to add missing executable bit to %{bindir}/mangohud
   install-commands:
   - |
     %{meson-install}
